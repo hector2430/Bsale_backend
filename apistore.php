@@ -15,7 +15,7 @@ class ApiStore{
             while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
                 $categoryrow= array(
                     'id'    => $row['id'],
-                    'name'  => $row['name'],
+                    'name'         => utf8_encode( $row['name']),
                     'total'=>$row['total']
                 );
                 array_push($categories["category"],$categoryrow);
@@ -32,12 +32,11 @@ class ApiStore{
         $prodcuts["product"] = array();
 
         $res = $product->getProducts();
-
         if($res->rowCount()){
             while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
                 $productrow= array(
                     'id'           => $row['id'],
-                    'name'         => $row['name'],
+                    'name'         => utf8_encode( $row['name']),
                     'url_image'    => $row['url_image'],
                     'price'        => number_format($row['price'], 0, ",", "."),
                     'discount'     => $row['discount']
@@ -45,7 +44,7 @@ class ApiStore{
                 );
                 array_push($prodcuts["product"],$productrow);
             }
-            echo json_encode($prodcuts); 
+            echo json_encode( $prodcuts);
         }else{
             echo json_encode(array('mensaje' => 'No hay categorias'));
         }
@@ -62,7 +61,7 @@ class ApiStore{
             while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
                 $productrow= array(
                     'id'           => $row['id'],
-                    'name'         => $row['name'],
+                    'name'         => utf8_encode( $row['name']),
                     'url_image'    => $row['url_image'],
                     'price'        => $row['price'],
                     'discount'     => $row['discount']
@@ -87,7 +86,7 @@ class ApiStore{
             while ($row = $res->fetch(PDO::FETCH_ASSOC)) {
                 $productrow= array(
                     'id'           => $row['id'],
-                    'name'         => $row['name'],
+                    'name'         => utf8_encode( $row['name']),
                     'url_image'    => $row['url_image'],
                     'price'        => $row['price'],
                     'discount'     => $row['discount']
