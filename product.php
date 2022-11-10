@@ -11,9 +11,7 @@ class Product extends DB{
     }
     function getProductsbyCategory($category){
 
-        $query =$this->connect()->prepare('SELECT * FROM product where category =:category');
-
-        $query->execute(["category"=>$category]);    
+        $query =$this->connect()->query('SELECT * FROM product where category = "'.$category.'"');
         return $query;
     }
     function getProductsbyName($name){
