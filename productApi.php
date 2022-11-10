@@ -9,7 +9,6 @@ if($method == "OPTIONS") {
     die();
 }
 
-
 $api = new ApiStore();
 //Switch dependiendo del method recibido
 
