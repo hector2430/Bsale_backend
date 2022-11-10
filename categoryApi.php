@@ -1,6 +1,6 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 include_once 'apistore.php';
-
 
 $api = new ApiStore();
 
