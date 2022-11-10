@@ -11,9 +11,10 @@ if($method == "OPTIONS") {
     die();
 }
 
-
+//Clase de API
 class ApiStore{
 
+    //obtiene todas las categorias
     function getAllCategories(){
         $category= new Category();
         $categories = array();
@@ -30,12 +31,16 @@ class ApiStore{
                 );
                 array_push($categories["category"],$categoryrow);
             }
+            //Retorna json con todas las categorias
             echo json_encode($categories); 
         }else{
             echo json_encode(array('mensaje' => 'No hay categorias'));
         }
 
     }
+
+
+    //obtiene todos los productos
     function getAllProducts(){
         $product= new Product();
         $prodcuts = array();
@@ -54,12 +59,14 @@ class ApiStore{
                 );
                 array_push($prodcuts["product"],$productrow);
             }
+            //Retorna json con todos los productos
             echo json_encode( $prodcuts);
         }else{
             echo json_encode(array('mensaje' => 'No hay categorias'));
         }
 
     }
+    //obtiene todos los productos por categoria
     function getProductsByCategoryAPI($categoryid){
         $product= new Product();
         $prodcuts = array();
@@ -79,12 +86,14 @@ class ApiStore{
                 );
                 array_push($prodcuts["product"],$productrow);
             }
+            //Retorna json con todos los productos por categoria
             echo json_encode($prodcuts); 
         }else{
             echo json_encode(array('mensaje' => 'No hay productos de la categoria seleccionada'));
         }
 
     }
+    //obtiene todos los productos por nombre
     function getProductsByNameAPI($name){
         $product= new Product();
         $prodcuts = array();
@@ -104,6 +113,7 @@ class ApiStore{
                 );
                 array_push($prodcuts["product"],$productrow);
             }
+            //Retorna json con todos los productos por nombre
             echo json_encode($prodcuts); 
         }else{
             echo json_encode(array('mensaje' => 'No hay productos con el nombre buscado'));

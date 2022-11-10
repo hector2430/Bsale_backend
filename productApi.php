@@ -11,28 +11,27 @@ if($method == "OPTIONS") {
 
 
 $api = new ApiStore();
+//Switch dependiendo del method recibido
 
 switch ($_SERVER['REQUEST_METHOD']) {
     case 'GET':
         if(isset($_GET['name'])){
+            //obtiene los productos por nombre
             $api->getProductsByNameAPI($_GET['name']);
 
         }else{
+            //obtiene todos los productos
             $api->getAllProducts();
         }
         
         break;
     case 'PUT':
-        # code...
         break;
     case 'POST':
-       
         break;
     case 'DELETE':
-        # code...
         break;
     default:
-        # code...
         break;
 }
 
