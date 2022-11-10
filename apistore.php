@@ -2,6 +2,8 @@
 
 include_once 'categoria.php';
 include_once 'product.php';
+header('Access-Control-Allow-Origin: *');
+
 class ApiStore{
 
     function getAllCategories(){
