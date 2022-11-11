@@ -1,4 +1,8 @@
 <?php
+header('Access-Control-Allow-Origin: https://bsaleforntend-production.up.railway.app/');
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
+header('content-type: application/json; charset=utf-8');
 //Clase Base de datos
 class DB{
     private $host;
