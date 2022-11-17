@@ -28,7 +28,7 @@ class Product extends DB{
     //Metodo que busca todos los productos por la busqueda del usuario
     function getProductsbyName($name){
 
-        $query =$this->connect()->query('SELECT * FROM product where name LIKE "'.$name.'%"');
+        $query =$this->connect()->query('SELECT * FROM product where name LIKE "%'.$name.'%"');
         return $query;
     }
 
