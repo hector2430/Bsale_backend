@@ -5,7 +5,12 @@
 <p>
   El Desafío backend consite en realizar una conexión a una base de datos MYSQL y obtener las categorías y la información de los productos, posteriormente realizar una API que disponga esta información a cualquier aplicación frontend para su uso.
  </p>
-  
+ 
+ # Intrucciones
+<ul>
+  <li>Descargar repositorio</li>
+  <li>Subir archivos a servidor</li>
+</ul> 
 La aplicación de front-backend es desarrollada en utilizando las siguientes tecnologías:<br>
 
 <ul>
