@@ -1,12 +1,24 @@
 
 # Desafío Bsale_backend
-Desafío Bsale_backend <br>
+
+<h2>Explicación del Desafío Backend </h2>
+<p>
+  El Desafío backend consite en realizar una conexión a una base de datos MYSQL y obtener las categorías y la información de los productos, posteriormente realizar una API que disponga esta información a cualquier aplicación frontend para su uso.
+ </p>
+  
 La aplicación de front-backend es desarrollada en utilizando las siguientes tecnologías:<br>
 
 <ul>
   <li>PHP</li>
   <li>MYSQL</li>
 </ul> 
+
+# Archivo db.php:
+Se crea la clase DB, la cual realiza la conexión con la base de datos utilizando el siguiente método:<br>
+<h3>connect()</h3>
+
+![image](https://user-images.githubusercontent.com/70005501/202604704-f6c4076b-2cfc-4a83-87a1-0ae90899c3ad.png)
+
 
 # Archivo product.php:
 Se crea la clase Product, la cual se interactua con la base de datos  para obtener la lista de productos segun dependa el caso, ademas de depender de la clase db.php<br>
